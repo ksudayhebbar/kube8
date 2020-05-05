@@ -18,6 +18,7 @@ before_install:
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud version
+  - gcloud config set container/use_client_certificate True
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project cohesive-totem-276223
   - gcloud config set compute/zone us-central1-c
