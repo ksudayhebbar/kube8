@@ -20,9 +20,9 @@ before_install:
   - gcloud version
   - gcloud config set container/use_client_certificate True
   - gcloud auth activate-service-account --key-file service-account.json
-  - gcloud config set project cohesive-totem-276223
-  - gcloud config set compute/zone us-central1-c
-  - gcloud container clusters get-credentials multi-cluster --zone us-central1-c --project cohesive-totem-276223
+  - gcloud config set project kube8-276405
+  - gcloud config set compute/zone us-west1-a
+  - gcloud container clusters get-credentials kube8  --zone us-west1-a --project kube8-276405
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t hebbaruday/react-test -f ./client/Dockerfile.dev ./client
 script:  
