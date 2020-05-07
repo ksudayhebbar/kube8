@@ -32,10 +32,6 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: pgpassword
-                key: PGPASSWORD                
-        resources:
-          limits:
-            memory: "10Mi"
-            cpu: "10m"
+                key: PGPASSWORD                 
         ports:
         - containerPort: 5000

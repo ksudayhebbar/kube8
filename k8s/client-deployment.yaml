@@ -15,9 +15,5 @@ spec:
       containers:
       - name: client
         image: hebbaruday/multi-client
-        resources:
-          limits:
-            memory: "10Mi"
-            cpu: "10m"
         ports:
         - containerPort: 3000
